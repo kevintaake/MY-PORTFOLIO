@@ -3,1338 +3,301 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kiribati Government • Ultra Advanced</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Kevin Taake Erekana | Kiribati Cyber Portfolio</title>
 
 <style>
-
-:root{
-
---blue:#00bfff;
---red:#ff3b3b;
---green:#00ff88;
---white:#ffffff;
---glass:rgba(255,255,255,0.08);
---border:rgba(255,255,255,0.15);
-
-}
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Consolas, monospace;
 }
 
 body{
-
-background:
-linear-gradient(
-rgba(0,0,0,0.78),
-rgba(0,0,0,0.88)
-),
-
-url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kiribati.svg');
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
-color:white;
-overflow-x:hidden;
+    background:url('https://raw.githubusercontent.com/kevintaake/MY-PORTFOLIO/main/background.png') center center/cover no-repeat fixed;
+    color:#00ff00;
+    min-height:100vh;
 }
 
-/* PARTICLES */
-
-.particles{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-overflow:hidden;
-
-z-index:-1;
+.overlay{
+    background:rgba(0,0,0,0.85);
+    min-height:100vh;
+    padding:20px;
 }
 
-.particles span{
-
-position:absolute;
-
-display:block;
-
-width:25px;
-height:25px;
-
-background:rgba(255,255,255,0.08);
-
-border-radius:50%;
-
-animation:animate 20s linear infinite;
-
-bottom:-150px;
+.header{
+    text-align:center;
+    padding:25px;
+    border:2px solid #00ff00;
+    box-shadow:0 0 20px #00ff00;
+    margin-bottom:20px;
+    border-radius:15px;
 }
 
-.particles span:nth-child(1){
-
-left:10%;
-width:80px;
-height:80px;
-animation-duration:18s;
+.name{
+    font-size:45px;
+    font-weight:bold;
 }
 
-.particles span:nth-child(2){
-
-left:20%;
-width:20px;
-height:20px;
-animation-duration:10s;
-animation-delay:2s;
+.kevin{
+    color:red;
 }
 
-.particles span:nth-child(3){
-
-left:70%;
-width:60px;
-height:60px;
-animation-duration:20s;
+.taake{
+    color:blue;
 }
 
-.particles span:nth-child(4){
-
-left:40%;
-width:100px;
-height:100px;
-animation-duration:25s;
+.erekana{
+    color:lime;
 }
 
-.particles span:nth-child(5){
-
-left:85%;
-width:30px;
-height:30px;
-animation-duration:14s;
+.typing{
+    margin-top:10px;
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:2px solid #00ff00;
+    width:0;
+    animation:typing 5s steps(40,end) forwards;
 }
 
-@keyframes animate{
-
-0%{
-transform:translateY(0) rotate(0deg);
-opacity:0;
+@keyframes typing{
+    from{width:0}
+    to{width:100%}
 }
 
-20%{
-opacity:1;
+.profile-box{
+    max-width:1200px;
+    margin:auto;
+    background:rgba(0,0,0,0.8);
+    border:2px solid #00ff00;
+    border-radius:15px;
+    box-shadow:0 0 25px #00ff00;
+    overflow:hidden;
 }
 
-100%{
-transform:translateY(-1200px) rotate(720deg);
-opacity:0;
+.profile{
+    text-align:center;
+    padding:30px;
 }
 
+.profile img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #00ff00;
+    box-shadow:0 0 30px #00ff00;
 }
 
-/* NAVBAR */
-
-nav{
-
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-
-padding:20px 60px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-background:rgba(0,0,0,0.35);
-
-backdrop-filter:blur(18px);
-
-border-bottom:1px solid var(--border);
-
-z-index:999;
+.section{
+    margin:20px;
+    padding:20px;
+    border:1px solid #00ff00;
+    border-radius:10px;
+    box-shadow:0 0 10px #00ff00;
 }
 
-.logo{
-
-font-size:36px;
-font-weight:800;
-letter-spacing:2px;
+.bio{
+    line-height:1.8;
+    font-size:18px;
 }
-
-.blue{
-color:var(--blue);
-}
-
-.red{
-color:var(--red);
-}
-
-.green{
-color:var(--green);
-}
-
-nav ul{
-
-display:flex;
-gap:35px;
-list-style:none;
-}
-
-nav ul li a{
-
-color:white;
-text-decoration:none;
-font-size:16px;
-font-weight:500;
-
-position:relative;
-
-transition:0.3s;
-}
-
-nav ul li a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-bottom:-5px;
-
-width:0%;
-height:2px;
-
-background:var(--blue);
-
-transition:0.3s;
-}
-
-nav ul li a:hover::after{
-
-width:100%;
-}
-
-nav ul li a:hover{
-
-color:var(--blue);
-}
-
-/* HERO */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-
-text-align:center;
-
-padding:120px 40px 40px;
-}
-
-.hero h1{
-
-font-size:95px;
-font-weight:900;
-
-line-height:1.1;
-
-margin-bottom:25px;
-
-text-shadow:
-0 0 20px rgba(255,255,255,0.4),
-0 0 40px rgba(0,191,255,0.4);
-
-animation:heroGlow 3s infinite alternate;
-}
-
-@keyframes heroGlow{
-
-from{
-transform:translateY(0px);
-}
-
-to{
-transform:translateY(-8px);
-}
-
-}
-
-.hero p{
-
-max-width:1000px;
-
-font-size:22px;
-
-line-height:2;
-
-opacity:0.92;
-}
-
-.hero-buttons{
-
-display:flex;
-gap:20px;
-
-margin-top:40px;
-
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.btn{
-
-padding:18px 40px;
-
-border:none;
-
-border-radius:18px;
-
-font-size:17px;
-font-weight:700;
-
-cursor:pointer;
-
-transition:0.4s;
-}
-
-.primary{
-
-background:
-linear-gradient(
-45deg,
-var(--blue),
-var(--green)
-);
-
-color:white;
-}
-
-.secondary{
-
-background:transparent;
-
-border:2px solid white;
-
-color:white;
-}
-
-.btn:hover{
-
-transform:translateY(-8px) scale(1.05);
-
-box-shadow:0 15px 30px rgba(0,0,0,0.5);
-}
-
-/* STATS */
 
 .stats{
-
-margin-top:80px;
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(240px,1fr));
-
-gap:25px;
-
-width:100%;
-max-width:1300px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
 }
 
-.stat-card{
-
-background:var(--glass);
-
-padding:35px;
-
-border-radius:30px;
-
-text-align:center;
-
-backdrop-filter:blur(16px);
-
-border:1px solid var(--border);
-
-transition:0.4s;
+.card{
+    border:1px solid #00ff00;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 0 10px #00ff00;
+    border-radius:10px;
 }
 
-.stat-card:hover{
-
-transform:translateY(-10px);
+.card:hover{
+    transform:scale(1.05);
+    transition:0.3s;
 }
 
-.stat-card h2{
-
-font-size:48px;
-
-margin-bottom:12px;
-
-color:var(--blue);
+.map-image{
+    width:100%;
+    max-width:700px;
+    display:block;
+    margin:auto;
+    border:2px solid #00ff00;
+    border-radius:10px;
+    box-shadow:0 0 20px #00ff00;
 }
 
-.stat-card p{
-
-font-size:18px;
+.footer{
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+    border-top:1px solid #00ff00;
 }
-
-/* SECTION */
-
-.section{
-
-padding:110px 60px;
-}
-
-.section-title{
-
-text-align:center;
-
-font-size:62px;
-font-weight:800;
-
-margin-bottom:70px;
-}
-
-/* PRESIDENT */
-
-.president-box{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:55px;
-
-align-items:center;
-}
-
-.president-image{
-
-position:relative;
-
-height:850px;
-
-overflow:hidden;
-
-border-radius:40px;
-
-box-shadow:
-0 0 35px rgba(0,191,255,0.25),
-0 0 70px rgba(0,0,0,0.6);
-}
-
-.president-image img{
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-transition:0.6s;
-
-filter:brightness(0.82);
-}
-
-.president-image:hover img{
-
-transform:scale(1.08);
-
-filter:brightness(0.95);
-}
-
-.president-image::before{
-
-content:"";
-
-position:absolute;
-
-top:-50%;
-left:-50%;
-
-width:200%;
-height:200%;
-
-background:
-linear-gradient(
-45deg,
-transparent,
-rgba(255,255,255,0.08),
-transparent
-);
-
-transform:rotate(25deg);
-
-animation:shine 6s linear infinite;
-
-z-index:2;
-pointer-events:none;
-}
-
-@keyframes shine{
-
-0%{
-transform:translateX(-100%) rotate(25deg);
-}
-
-100%{
-transform:translateX(100%) rotate(25deg);
-}
-
-}
-
-.glow-border{
-
-position:absolute;
-inset:0;
-
-border-radius:40px;
-
-border:3px solid rgba(255,255,255,0.15);
-
-box-shadow:
-0 0 25px rgba(0,191,255,0.45),
-0 0 70px rgba(0,255,123,0.15);
-
-pointer-events:none;
-}
-
-.president-overlay{
-
-position:absolute;
-
-bottom:0;
-left:0;
-
-width:100%;
-
-padding:45px;
-
-background:
-linear-gradient(
-transparent,
-rgba(0,0,0,0.92)
-);
-
-z-index:3;
-}
-
-.president-overlay h1{
-
-font-size:22px;
-
-letter-spacing:6px;
-
-margin-bottom:12px;
-
-color:var(--blue);
-}
-
-.president-overlay h2{
-
-font-size:60px;
-
-font-weight:800;
-
-margin-bottom:15px;
-}
-
-.president-overlay p{
-
-font-size:18px;
-
-line-height:1.8;
-
-opacity:0.9;
-}
-
-/* PRESIDENT CONTENT */
-
-.president-content{
-
-background:var(--glass);
-
-padding:45px;
-
-border-radius:35px;
-
-backdrop-filter:blur(16px);
-
-border:1px solid var(--border);
-}
-
-.president-content h2{
-
-font-size:58px;
-
-margin-bottom:20px;
-}
-
-.president-content p{
-
-font-size:18px;
-
-line-height:2;
-
-opacity:0.95;
-}
-
-.info-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:20px;
-
-margin-top:35px;
-}
-
-.info-card{
-
-background:rgba(255,255,255,0.05);
-
-padding:25px;
-
-border-radius:22px;
-
-border:1px solid rgba(255,255,255,0.08);
-
-transition:0.4s;
-}
-
-.info-card:hover{
-
-transform:translateY(-8px);
-
-background:rgba(255,255,255,0.08);
-}
-
-.info-card h3{
-
-margin-bottom:10px;
-
-color:var(--blue);
-}
-
-/* PROFILE */
-
-.profile{
-
-margin-top:80px;
-
-display:grid;
-
-grid-template-columns:420px 1fr;
-
-gap:55px;
-
-align-items:center;
-
-background:var(--glass);
-
-padding:45px;
-
-border-radius:35px;
-
-backdrop-filter:blur(16px);
-
-border:1px solid var(--border);
-}
-
-.profile img{
-
-width:100%;
-height:560px;
-
-object-fit:cover;
-
-border-radius:30px;
-
-border:3px solid rgba(255,255,255,0.15);
-}
-
-.profile-content h2{
-
-font-size:58px;
-
-margin-bottom:25px;
-}
-
-.profile-content p{
-
-font-size:18px;
-
-line-height:2;
-}
-
-.portfolio-btn{
-
-display:inline-block;
-
-margin-top:35px;
-
-padding:18px 35px;
-
-background:
-linear-gradient(
-45deg,
-var(--blue),
-var(--green)
-);
-
-color:white;
-
-text-decoration:none;
-
-border-radius:18px;
-
-font-weight:700;
-
-transition:0.4s;
-}
-
-.portfolio-btn:hover{
-
-transform:translateY(-8px) scale(1.05);
-}
-
-/* MAP */
-
-.map-box{
-
-margin-top:60px;
-
-height:650px;
-
-overflow:hidden;
-
-border-radius:35px;
-
-border:1px solid var(--border);
-
-box-shadow:0 0 40px rgba(0,0,0,0.5);
-}
-
-/* WEATHER */
-
-.weather-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-margin-top:50px;
-}
-
-.weather-card{
-
-background:var(--glass);
-
-padding:35px;
-
-border-radius:30px;
-
-text-align:center;
-
-border:1px solid var(--border);
-
-backdrop-filter:blur(16px);
-
-transition:0.4s;
-}
-
-.weather-card:hover{
-
-transform:translateY(-10px);
-}
-
-.weather-card h3{
-
-font-size:30px;
-
-margin-bottom:15px;
-
-color:var(--green);
-}
-
-.weather-card p{
-
-font-size:19px;
-}
-
-/* FOOTER */
-
-footer{
-
-padding:70px 40px;
-
-text-align:center;
-
-background:rgba(0,0,0,0.45);
-
-border-top:1px solid var(--border);
-
-margin-top:80px;
-}
-
-footer h2{
-
-font-size:48px;
-
-margin-bottom:20px;
-}
-
-footer p{
-
-font-size:18px;
-
-line-height:2;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1100px){
-
-.hero h1{
-
-font-size:58px;
-}
-
-.section-title{
-
-font-size:40px;
-}
-
-.president-box,
-.profile{
-
-grid-template-columns:1fr;
-}
-
-.president-content h2,
-.profile-content h2{
-
-font-size:42px;
-}
-
-.president-image{
-
-height:650px;
-}
-
-.profile img{
-
-height:auto;
-}
-
-nav{
-
-padding:20px 25px;
-
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-
-flex-wrap:wrap;
-justify-content:center;
-gap:18px;
-}
-
-.section{
-
-padding:90px 25px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- PARTICLES -->
+<div class="overlay">
 
-<div class="particles">
-
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-
-<span class="blue">Kevin</span>
-<span class="red">Taake 🇰🇮 </span>
-
-</div>
-
-<ul>
-
-<li><a href="#">Home</a></li>
-<li><a href="#">Government</a></li>
-<li><a href="#">Tourism</a></li>
-<li><a href="#">Weather</a></li>
-<li><a href="#">Economy</a></li>
-
-</ul>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>
-KIRIBATI GOVERNMENT
-ADVANCED WEBSITE
+<div class="header">
+<h1 class="name">
+<span class="kevin">Kevin</span>
+<span class="taake">Taake</span>
+<span class="erekana">Erekana</span>
 </h1>
 
+<p class="typing">
+WELCOME TO MY KIRIBATI CYBER PORTFOLIO
+</p>
+</div>
+
+<div class="profile-box">
+
+<div class="profile">
+<img src="https://raw.githubusercontent.com/kevintaake/MY-PORTFOLIO/main/file.png" alt="Kevin Profile">
+</div>
+
+<div class="section">
+<h2>👤 ABOUT ME</h2>
+<br>
+
+<div class="bio">
 <p>
-
-Advanced futuristic Kiribati government information website
-featuring modern glassmorphism UI,
-interactive systems,
-weather radar,
-tourism information,
-economy statistics,
-portfolio integration,
-and advanced animations.
-
+Hello! My name is
+<span style="color:red;">Kevin</span>
+<span style="color:blue;">Taake</span>
+<span style="color:lime;">Erekana</span>.
 </p>
 
-<div class="hero-buttons">
+<p>
+🇰🇮 I am from Kiribati and enjoy web design, coding,
+technology, cybersecurity learning, and building
+professional websites.
+</p>
 
-<button class="btn primary">
-ENTER SYSTEM
-</button>
+<p>
+💻 Kiribati Cyber Portfolio Owner
+</p>
 
-<button class="btn secondary">
-EXPLORE KIRIBATI
-</button>
+<p>
+🌊 South Tarawa, Kiribati
+</p>
+</div>
+</div>
+
+<div class="section">
+<h2>🇰🇮 KIRIBATI MAP</h2>
+<br>
+
+<img
+class="map-image"
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Kiribati_location_map.svg/800px-Kiribati_location_map.svg.png"
+alt="Kiribati Map">
+
+<br><br>
+
+<iframe
+src="https://maps.google.com/maps?q=Teaoraereke%20Kiribati&t=k&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+style="border:3px solid #00ff00;border-radius:10px;"
+loading="lazy">
+</iframe>
+
+<br><br>
+
+<h3>📍 LOCATION DETAILS</h3>
+
+<p>🇰🇮 Country: Kiribati</p>
+<p>🌊 Island: South Tarawa</p>
+<p>📍 Area: Teaoraereke</p>
+<p>⛪ Nearby Landmark: Cathedral Area</p>
 
 </div>
 
-<!-- STATS -->
+<div class="section">
+<h2>🖥 CYBER DASHBOARD</h2>
 
 <div class="stats">
 
-<div class="stat-card">
-
-<h2>33</h2>
-
-<p>Islands</p>
-
+<div class="card">
+<h3>STATUS</h3>
+<p>ONLINE</p>
 </div>
 
-<div class="stat-card">
-
-<h2>120K+</h2>
-
-<p>Population</p>
-
+<div class="card">
+<h3>LOCATION</h3>
+<p>KIRIBATI</p>
 </div>
 
-<div class="stat-card">
-
-<h2>2026</h2>
-
-<p>Modern System</p>
-
+<div class="card">
+<h3>PROFILE</h3>
+<p>ACTIVE</p>
 </div>
 
-<div class="stat-card">
+<div class="card">
+<h3>SKILLS</h3>
+<p>HTML • CSS • JS</p>
+</div>
 
-<h2>100%</h2>
+<div class="card">
+<h3>WEBSITE</h3>
+<p>CYBER PORTFOLIO</p>
+</div>
 
-<p>Responsive Design</p>
-
+<div class="card">
+<h3>OWNER</h3>
+<p>KEVIN TAAKE EREKANA</p>
 </div>
 
 </div>
+</div>
 
-</section>
+<div class="section">
+<h2>📜 SYSTEM LOG</h2>
+<br>
 
-<!-- PRESIDENT -->
+<p>> Initializing system...</p>
+<p>> Loading profile data...</p>
+<p>> Connecting to Kiribati server...</p>
+<p>> Loading map information...</p>
+<p>> Access granted...</p>
+<p>> Welcome Kevin Taake Erekana...</p>
+<p>> Cyber Portfolio Online...</p>
 
-<section class="section">
+</div>
 
-<h1 class="section-title">
-PRESIDENT PROFILE
-</h1>
-
-<div class="president-box">
-
-<!-- PRESIDENT IMAGE -->
-
-<div class="president-image">
-
-<img
-src="https://raw.githubusercontent.com/bekarakaranabutae-oss/KIRIBATI-WEBSITE-BY-KEVIN-TAAKE-/main/taneti-mamau.jpg"
-alt="Taneti Maamau">
-
-<div class="glow-border"></div>
-
-<div class="president-overlay">
-
-<h1>PRESIDENT</h1>
-
-<h2>Taneti Maamau 🇰🇮</h2>
+<div class="section">
+<h2>🌐 QUICK LINKS</h2>
+<br>
 
 <p>
-Leader of Kiribati • Development • Climate Action • Economy
-</p>
-
-</div>
-
-</div>
-
-<!-- PRESIDENT INFO -->
-
-<div class="president-content">
-
-<h2>Taneti Maamau</h2>
-
-<p>
-
-Taneti Maamau serves as the President of Kiribati,
-focusing on national development,
-climate resilience,
-renewable energy,
-marine protection,
-fisheries expansion,
-tourism growth,
-and international cooperation.
-
-</p>
-
-<p style="margin-top:20px;">
-
-The administration continues supporting
-transportation systems,
-airport upgrades,
-road construction,
-communication development,
-and sustainable island infrastructure projects.
-
-</p>
-
-<div class="info-grid">
-
-<div class="info-card">
-
-<h3>Position</h3>
-
-<p>President</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>Capital</h3>
-
-<p>South Tarawa</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>Economy</h3>
-
-<p>Marine & Fisheries</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>Focus</h3>
-
-<p>Climate Development</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROFILE -->
-
-<section class="section">
-
-<h1 class="section-title">
-PROFILE INFORMATION
-</h1>
-
-<div class="profile">
-
-<img
-src="https://raw.githubusercontent.com/bekarakaranabutae-oss/MY-PORTFOLIO/main/file.png"
-alt="Kevin">
-
-<div class="profile-content">
-
-<h2>
-
-<span class="blue">Kevin</span>
-<span class="red">Taake</span>
-<span class="green">Erekana 🇰🇮</span>
-
-</h2>
-
-<p>
-
-Modern portfolio profile integrated into
-the advanced Kiribati government information system.
-Featuring futuristic interface design,
-glassmorphism effects,
-interactive systems,
-weather integration,
-and advanced responsive layout.
-
-</p>
-
-<p style="margin-top:20px;">
-
-The platform combines tourism,
-government systems,
-economy updates,
-weather radar,
-interactive maps,
-and portfolio showcase integration.
-
-</p>
-
-<a
-class="portfolio-btn"
-href="https://bekarakaranabutae-oss.github.io/MY-PORTFOLIO/"
-target="_blank">
-
-OPEN MY BIO WEBSITE
-
+Portfolio:
+<a href="https://bekarakaranabutae-oss.github.io/MY-PORTFOLIO/" target="_blank" style="color:#00ff00;">
+Open Portfolio
 </a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MAP -->
-
-<section class="section">
-
-<h1 class="section-title">
-LIVE TARAWA MAP
-</h1>
-
-<div class="map-box">
-
-<iframe
-src="https://maps.google.com/maps?q=tarawa%20kiribati&t=k&z=11&ie=UTF8&iwloc=&output=embed">
-</iframe>
-
-</div>
-
-</section>
-
-<!-- WEATHER -->
-
-<section class="section">
-
-<h1 class="section-title">
-WEATHER INFORMATION
-</h1>
-
-<div class="weather-grid">
-
-<div class="weather-card">
-
-<h3>Temperature</h3>
-
-<p>84°F - 88°F</p>
-
-</div>
-
-<div class="weather-card">
-
-<h3>Humidity</h3>
-
-<p>87%</p>
-
-</div>
-
-<div class="weather-card">
-
-<h3>Condition</h3>
-
-<p>Cloudy & Tropical</p>
-
-</div>
-
-<div class="weather-card">
-
-<h3>Wind</h3>
-
-<p>11 MPH Northeast</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- RADAR -->
-
-<section class="section">
-
-<h1 class="section-title">
-WEATHER RADAR
-</h1>
-
-<div class="map-box">
-
-<iframe
-src="https://embed.windy.com/embed2.html?lat=1.338&lon=173.017&zoom=6&level=surface&overlay=radar&product=radar">
-</iframe>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<h2>
-
-<span class="blue">Kevin</span>
-<span class="red">Taake 🇰🇮</span>
-
-
-</h2>
-
-<p>
-
-Advanced Kiribati Government Information Website •
-Tourism • Economy • Weather • Development • Portfolio
-
 </p>
 
-</footer>
+</div>
 
-<script>
+</div>
 
-/* BUTTON EFFECT */
+<div class="footer">
+<h2>
+<span style="color:red;">Kevin</span>
+<span style="color:blue;">Taake</span>
+<span style="color:lime;">Erekana</span>
+</h2>
 
-const enterBtn =
-document.querySelector(".primary");
+<p>🇰🇮 Kiribati Cyber Portfolio © 2026</p>
+</div>
 
-enterBtn.addEventListener("click",()=>{
-
-enterBtn.innerHTML =
-"SYSTEM ACTIVATED";
-
-enterBtn.style.background =
-"linear-gradient(45deg,#00ff88,#00bfff)";
-
-});
-
-/* SCROLL ANIMATION */
-
-const sections =
-document.querySelectorAll(".section");
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(section=>{
-
-const top =
-section.getBoundingClientRect().top;
-
-if(top < window.innerHeight - 100){
-
-section.style.opacity = "1";
-section.style.transform = "translateY(0px)";
-
-}
-
-});
-
-});
-
-sections.forEach(section=>{
-
-section.style.opacity = "0";
-section.style.transform = "translateY(70px)";
-section.style.transition = "1s";
-
-});
-
-/* LIVE CLOCK */
-
-const clock =
-document.createElement("div");
-
-clock.style.position = "fixed";
-clock.style.bottom = "20px";
-clock.style.right = "20px";
-clock.style.padding = "15px 22px";
-clock.style.borderRadius = "20px";
-clock.style.background = "rgba(0,0,0,0.45)";
-clock.style.backdropFilter = "blur(10px)";
-clock.style.border = "1px solid rgba(255,255,255,0.15)";
-clock.style.fontWeight = "700";
-clock.style.zIndex = "999";
-clock.style.boxShadow = "0 0 20px rgba(0,191,255,0.25)";
-
-document.body.appendChild(clock);
-
-setInterval(()=>{
-
-const now =
-new Date();
-
-clock.innerHTML =
-now.toLocaleTimeString();
-
-},1000);
-
-</script>
+</div>
 
 </body>
 </html>
